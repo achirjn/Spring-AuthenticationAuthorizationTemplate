@@ -13,5 +13,9 @@ public class HomeController {
     public ResponseEntity<?> getMethodName() {
         return new ResponseEntity("you are home",HttpStatus.OK);
     }
+    @GetMapping("/loginsuccess")
+    public ResponseEntity<?> getLoginSuccess() {
+        return new ResponseEntity("you are logged in successfully",HttpStatus.OK);
+    }
     
 }

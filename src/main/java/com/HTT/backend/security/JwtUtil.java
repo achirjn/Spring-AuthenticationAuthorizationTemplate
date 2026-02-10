@@ -15,6 +15,7 @@ import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.security.Keys;
 import io.jsonwebtoken.security.SignatureException;
 
+@Component
 public class JwtUtil {
     private static final String SECRET_KEY = "sdkpoLjgsJKdOF23SDs0400sdl=GGstwwbxB,/sggw";
     private static final Key key = Keys.hmacShaKeyFor(SECRET_KEY.getBytes(StandardCharsets.UTF_8));
