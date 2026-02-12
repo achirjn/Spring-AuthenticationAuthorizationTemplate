@@ -30,7 +30,12 @@ public class User implements UserDetails{
     private String name;
     private String email;
     private String password;
+    @Column(nullable=true)
     private String verificationToken;
+    @Column(nullable=true)
+    private String resetPasswordToken;
+    @Column(nullable=true)
+    private LocalDateTime tokenExpirationTime;
     private int accountVerified;
     
     @Column(columnDefinition = "TINYINT(1)")

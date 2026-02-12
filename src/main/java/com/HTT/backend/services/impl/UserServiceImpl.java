@@ -30,6 +30,11 @@ public class UserServiceImpl implements UserService{
         return userRepository.save(user);
     }
 
+    @Override
+    public User findByResetPasswordToken(String token) {
+        return userRepository.findByResetPasswordToken(token).orElse(null);
+    }
+
 
 }
 
